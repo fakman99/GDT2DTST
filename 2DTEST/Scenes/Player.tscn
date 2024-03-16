@@ -8,10 +8,11 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_0r83u")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Body" type="CharacterBody2D" parent="."]
+floor_constant_speed = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Body"]
 texture = ExtResource("2_4evb4")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Sprite2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
 shape = SubResource("RectangleShape2D_yidlw")
